@@ -1,0 +1,37 @@
+<h3>New Syntax - {{user?.fName}} {{user?.lName}}</h3>
+<button (click)="showMoreInfo()">More information</button>
+
+@if (isInfoVisible) {
+    <div>
+        <p class="age"><b>Age:</b> {{user?.age}}</p>
+        <p><b>Job position:</b> {{user?.jobPosition}}</p>
+
+
+        <p class="header-skill">Skills:</p>
+        <ul class="skills">
+            @for (skill of user?.skills; track $index) {
+                <li>{{skill}}</li>
+            } @empty {
+                <li>No skills on the list</li>
+            }
+        </ul>
+
+        <p>
+            <b>Experience: </b>
+            @switch (user?.experience) {
+                @case (experience.Small) { 
+                    <span>Junior Software Engineer</span> 
+                }
+                @case (experience.Medium) { 
+                    <span>Regular Software Engineer</span> 
+                }
+                @case (experience.Big) { 
+                    <span>Senior Software Engineer</span>
+                }
+                @default { <span>Intern</span> }
+            }
+        </p>
+    </div>
+} @else {
+    <p class="no-information">Show more information about {{user?.fName}} {{user?.lName}}</p>
+}

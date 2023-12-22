@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+.header-skill {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.skills {
+    margin-top: 0;
+}
+
+button {
+    background-color: rgb(47, 89, 225);
+    color: white;
+    border: 1px solid darkblue;
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h3 {
+    background-color: rgb(239, 239, 239);
+    border: 1px solid rgb(194, 194, 194);
+    padding: 5px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 5px;
+}
+
+div {
+    padding: 5px 10px;
+    background-color: #e1fdf5;
+    border: 1px solid #c5f3e6;
+    margin-top: 10px;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.age {
+    margin-top: 5px;
+}
+
+.no-information {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

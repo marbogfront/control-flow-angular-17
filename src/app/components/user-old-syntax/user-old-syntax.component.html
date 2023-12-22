@@ -1,0 +1,35 @@
+
+<ng-container *ngIf="user">
+    <h3>Old Syntax - {{user.fName}} {{user.lName}}</h3>
+    <button (click)="showMoreInfo()">More information</button>
+
+    <div *ngIf="isInfoVisible; else noInformation">
+        <p class="age"><b>Age:</b> {{user.age}}</p>
+        <p><b>Job position:</b> {{user.jobPosition}}</p>
+
+        <p class="header-skill">Skills:</p>
+        <ul class="skills">
+            <li *ngFor="let skill of user.skills">{{skill}}</li>
+        </ul>
+
+        <p>
+            <b>Experience: </b>
+            <ng-container [ngSwitch]="user.experience">
+                <span *ngSwitchCase="experience.Small">
+                    Junior Software Engineer
+                </span>
+                <span *ngSwitchCase="experience.Medium">
+                    Regular Software Engineer
+                </span>
+                <span *ngSwitchCase="experience.Big"
+                >Senior Software Engineer
+            </span>
+                <span *ngSwitchDefault>Intern</span>
+            </ng-container>
+        </p>
+    </div>
+</ng-container>
+
+<ng-template #noInformation>
+    <p class="no-information">Show more information about {{user?.fName}} {{user?.lName}}</p>
+</ng-template>

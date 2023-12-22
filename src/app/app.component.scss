@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+
+    a {
+        margin-right: 1rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: #000000;
+
+        &:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+    }
+}
